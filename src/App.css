@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+*{
+  font-family: Helvetica, Arial, sans-serif;
+}
+body{
+  background-color: #8B8BAE;
+}
+/* .jumbotron{
+  background-color: #282F44 !important;
+  box-shadow: 0 8px 6px -6px white;
+  color: white;  
+} */
+
+.space{
+  margin: 50px;
+  padding: 20px;
+}
+.full-width{
+  margin: auto;
+  padding-top: 15px;
+  width: 50%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question{
+  background-color: white;
+  margin: 10px;
+  padding: 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  box-shadow: 0 8px 6px -6px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.qtext{
+  font-style: italic;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+td{
+  vertical-align: middle;
 }
