@@ -1,13 +1,18 @@
 import React, {Component} from "react";
 import FormComponent from "./FormComponent";
 import { QUESTIONS } from "../assets/questions";
-
+import { Form } from "reactstrap";
+import Result from "./ResultComponent";
 class FormContainer extends Component{
     state = {
-        questions: QUESTIONS
+        questions: QUESTIONS,
+        autonomy: 0,
+        relatedness: 0,
+        competence: 0,
+        isCalculated: false
     }
    
-    handleClick = ()=>{
+    handleClick = (event)=>{
         let autonomy = 0;
         let relatedness = 0;
         let competence = 0;
@@ -56,9 +61,20 @@ class FormContainer extends Component{
                 }
             }
         }
+        this.setState(prevState=>{
+            return(
+                {
+                    ...prevState,
+                    autonomy: autonomy,
+                    relatedness: relatedness,
+                    competence: competence,
+                    isCalculated: true
+                }
+            );
 
-        alert(`Autonomy: ${autonomy}, Relatedness: ${relatedness}, Competence: ${competence}`);
-
+        });
+        // alert(`Autonomy: ${autonomy}, Relatedness: ${relatedness}, Competence: ${competence}`);
+        event.preventDefault();
     };
     render(){
         const data = this.state.questions.map(question=>{    
@@ -72,15 +88,27 @@ class FormContainer extends Component{
                 </div>
             );
         });
+        let result = <div></div>;
+        if(this.state.isCalculated){
+            result = <Result autonomy={this.state.autonomy}
+                             relatedness={this.state.relatedness}
+                             competence={this.state.competence}   
+                        />;
+        }
+        else{
+            result = <Form onSubmit={this.handleClick}>
+                        {data}
+                        <div className="col-12">
+                            <button className="btn btn-danger">SUBMIT</button>
+                        </div>
+                    </Form>;
+        }
         return(
             <div className="row text-center">
                 <div className="col-12 question">
-                <h3><strong>Basic Psychological Need Satisfaction and Frustration Scale(BPNSNF)</strong></h3>
+                    <h4><strong>Basic Psychological Need Satisfaction and Frustration Scale(BPNSNF)</strong></h4>
                 </div>
-                {data}
-                <div className="col-12">
-                    <button className="btn btn-danger" onClick={this.handleClick}>SUBMIT</button>
-                </div>
+                {result}
             </div>
         );
     }

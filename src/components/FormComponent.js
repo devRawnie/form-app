@@ -9,25 +9,25 @@ function FormComponent({qid, question, domain}){
     }
     return(
         <div className="question">
-            <h5 className="text-left qtext">{`${qid}. ${question}`}</h5>
+            <p className="text-left qtext">{`${qid}. ${question}`}</p>
             <Table borderless>
                 <tr>
                     <th></th>
-                    <th style={{fontSize: "1.2em"}}>1</th>
-                    <th style={{fontSize: "1.2em"}}>2</th>
-                    <th style={{fontSize: "1.2em"}}>3</th>
-                    <th style={{fontSize: "1.2em"}}>4</th>
-                    <th style={{fontSize: "1.2em"}}>5</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
                     <th></th>
                 </tr>
                 <tr>
-                    <td style={{textAlign: "right", fontSize: "1.2em"}}>Not true at all</td>
-                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[0]}/></td>
-                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[1]}/></td>
-                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[2]}/></td>
-                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[3]}/></td>
-                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[4]}/></td>
-                    <td style={{textAlign: "left", fontSize: "1.2em"}}>Completely true</td>
+                    <td className="big" style={{textAlign: "right"}}>Not true at all</td>
+                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[0]} required/></td>
+                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[1]} required/></td>
+                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[2]} required/></td>
+                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[3]} required/></td>
+                    <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[4]} required/></td>
+                    <td className="big" style={{textAlign: "left"}}>Completely True</td>
                 </tr>
             </Table>
             {/* <hr style={{border: "2px solid", margin: "5px"}}/> */}

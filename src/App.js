@@ -1,13 +1,16 @@
 import './App.css';
 import Header from './components/HeaderComponent';
 import MainComponent from "./components/MainComponent";
+import { FirebaseDatabaseProvider } from "@react-firebase/database";
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <MainComponent/>
-    </div>
+    <FirebaseDatabaseProvider>
+      <div>
+        <Header/>
+        <MainComponent/>
+      </div>
+    </FirebaseDatabaseProvider>
   );
 }
 
