@@ -1,16 +1,28 @@
+import React from "react";
 import './App.css';
 import Header from './components/HeaderComponent';
 import MainComponent from "./components/MainComponent";
-import { FirebaseDatabaseProvider } from "@react-firebase/database";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Result from "./components/ResultComponent";
+
+function Main(){
+  return(
+    <div>
+      <Header/>
+      <MainComponent/>
+    </div>
+  )
+}
 
 function App() {
   return (
-    <FirebaseDatabaseProvider>
-      <div>
-        <Header/>
-        <MainComponent/>
-      </div>
-    </FirebaseDatabaseProvider>
+
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Main}/>
+        <Route exact path="/result" component={Result}/>
+      </Switch>
+      </BrowserRouter>
   );
 }
 

@@ -90,10 +90,12 @@ class FormContainer extends Component{
         });
         let result = <div></div>;
         if(this.state.isCalculated){
-            result = <Result autonomy={this.state.autonomy}
-                             relatedness={this.state.relatedness}
-                             competence={this.state.competence}   
-                        />;
+            
+            result = <Result
+                        autonomy={this.state.autonomy}
+                        relatedness={this.state.relatedness}
+                        competence={this.state.competence}
+                    />;
         }
         else{
             result = <Form onSubmit={this.handleClick}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "reactstrap";
+import { Button, Table } from "reactstrap";
 
 function Result({autonomy, relatedness, competence}){
     return(
@@ -19,6 +19,7 @@ function Result({autonomy, relatedness, competence}){
                 <th>{competence}</th>
             </tr>
         </Table>
+        <Button className="btn btn-danger" onClick={()=>{window.location.reload()}}>Reload</Button>
         </div>
     );
 }
