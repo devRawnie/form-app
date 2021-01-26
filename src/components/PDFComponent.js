@@ -25,14 +25,10 @@ class PDFComponent extends Component{
         return response;
     }
 
-    componentDidMount(){
-        console.log(this.state.score['autonomy1']);
-    }
-
     render(){
         const response = this.generateTable();
         return(
-                <Table bordered style={{borderColor: "white", marginTop: "20px", color: "white"}}>
+                <Table id="responsespdf" bordered style={{borderColor: "black", marginTop: "20px", backgroundColor: "white"}}>
                     <thead>
                         <tr>
                             <th>QUESTION</th>
