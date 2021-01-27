@@ -96,6 +96,9 @@ class FormContainer extends Component{
     componentDidUpdate(){
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
+    componentDidMount(){
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
     render(){
         const data = this.state.questions.map(question=>{    
             return (
