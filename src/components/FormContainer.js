@@ -91,9 +91,11 @@ class FormContainer extends Component{
             );
 
         });
-        // alert(`Autonomy: ${autonomy}, Relatedness: ${relatedness}, Competence: ${competence}`);
         event.preventDefault();
     };
+    componentDidUpdate(){
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
     render(){
         const data = this.state.questions.map(question=>{    
             return (
@@ -120,7 +122,7 @@ class FormContainer extends Component{
             result = <Form onSubmit={this.handleClick}>
                         {data}
                         <div className="col-12">
-                            <button className="btn btn-danger">SUBMIT</button>
+                            <button className="btn btn-danger" style={{margin: "10px;"}}>SUBMIT</button>
                         </div>
                     </Form>;
         }

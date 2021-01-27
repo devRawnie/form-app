@@ -25,11 +25,11 @@ function FormComponent({qid, question, domain}){
                 <tbody>
                     <tr>
                         <td className="big" style={{textAlign: "right"}}>Not true at all</td>
-                        <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[0]} required/></td>
-                        <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[1]} required/></td>
-                        <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[2]} required/></td>
-                        <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[3]} required/></td>
-                        <td><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[4]} required/></td>
+                        <td style={{padding: "3px"}}><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[0]} required/></td>
+                        <td style={{padding: "3px"}}><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[1]} required/></td>
+                        <td style={{padding: "3px"}}><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[2]} required/></td>
+                        <td style={{padding: "3px"}}><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[3]} required/></td>
+                        <td style={{padding: "3px"}}><input className="form-control" type="radio" name={`${domain}${qid}`} value={marks[4]} required/></td>
                         <td className="big" style={{textAlign: "left"}}>Completely True</td>
                     </tr>
                 </tbody>

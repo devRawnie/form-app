@@ -66,22 +66,22 @@ function Result({autonomy, relatedness, competence, score}){
     
     return(
         <div id="printComponent" className="col-12">
-        <Table style={tableStyle}>
+        <Table style={tableStyle} hover>
             <thead>
                 <tr>
-                    <th colSpan="3" className="normal">SCORE</th>
+                    <th colSpan="3">SCORE</th>
                 </tr>
                 <tr>
-                    <th className="normal">AUTONOMY</th>
-                    <th className="normal">RELATEDNESS</th>
-                    <th className="normal">COMPETENCE</th>
+                    <th>AUTONOMY</th>
+                    <th>RELATEDNESS</th>
+                    <th>COMPETENCE</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td className="normal">{(autonomy/8).toFixed(1)}</td>
-                    <td className="normal">{(relatedness/8).toFixed(1)}</td>
-                    <td className="normal">{(competence/8).toFixed(1)}</td>
+                    <td>{(autonomy/8).toFixed(1)}</td>
+                    <td>{(relatedness/8).toFixed(1)}</td>
+                    <td>{(competence/8).toFixed(1)}</td>
                 </tr>
             </tbody>
         </Table>
@@ -91,7 +91,7 @@ function Result({autonomy, relatedness, competence, score}){
                 <Button className="btn btn-danger" style={{marginBottom: "10px"}} onClick={()=>{window.location.reload()}}>Reload</Button>
             </div>
             <div className="col-6">
-                <Button className="btn btn-primary" style={{marginBottom: "10px"}} onClick={print}>Download Responses</Button>
+                <Button className="btn btn-success" style={{marginBottom: "10px"}} onClick={print}>Download Responses</Button>
             </div>
             
         </div>

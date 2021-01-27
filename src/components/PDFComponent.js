@@ -28,7 +28,7 @@ class PDFComponent extends Component{
     render(){
         const response = this.generateTable();
         return(
-                <Table bordered style={{borderColor: "black", 
+                <Table bordered hover style={{borderColor: "black", 
                                         marginTop: "20px", 
                                         backgroundColor: "white",     
                                         borderRadius: "10px",
