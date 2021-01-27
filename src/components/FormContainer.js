@@ -97,7 +97,7 @@ class FormContainer extends Component{
     render(){
         const data = this.state.questions.map(question=>{    
             return (
-                <div className="col-12">
+                <div className="col-12" key={question.id}>
                     <FormComponent 
                         key={question.id}
                         qid={question.id}

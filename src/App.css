@@ -33,6 +33,7 @@ body{
 
 }
 
+
 .question{
   background-color: white;
   margin: 10px;
@@ -49,4 +50,8 @@ body{
 
 td{
   vertical-align: middle;
+}
+
+img:hover{
+  cursor: pointer;
 }
